@@ -1,50 +1,39 @@
-# 🇬🇭 CPInc
+<div align="center">
 
-**_Code dey pop, vibes dey flow, we dey thrive – pure Ghana energy!_** ✨🔥  
+<img src="https://github.com/jumpspaces/.github/blob/main/logo.jpg" alt="JUMP SPACES" width="200" />
 
-Yo, bra ha sharp! na flee squad – devs, designers, tech gees wey dey build mad tings plus enjoy am paa! Code dey slap, culture dey bang, no long talk!
+# JUMP SPACES
 
----
+**Multi-creator software, SaaS & AI solutions hub.**
+We build reliable, successful outcomes for clients — from first concept to live product.
 
-## 🌍 Our Vision
+[![Website](https://img.shields.io/badge/jumpspaces.com-00E662?style=flat-square&logoColor=011C11)]()
+[![Email](https://img.shields.io/badge/hello@jumpspaces.com-011C11?style=flat-square)](mailto:)
 
-**Make Ghana blow for global tech, one commit at a time.**  
-
-> *“If you go, we go come.”*
-> *"Sɛ wo kɔ a, yɛ bɛ ba."*
-> We dey learn, we dey glow, we dey level up as fam — build tech wey sharp, clean, plus 100% Ghanaian flex.  
+</div>
 
 ---
 
-## 💻 Wetin We Dey Cook
+## What We Build
 
-- **Open Source Fire** – Tools, apps, plus hacks for the mandem 😎  
-- **Tech & Brain Gain** – Mentorship, workshops, tutorials, plus pure wisdom 🧠  
-- **Design with Sauce** – African UI/UX wey dey burst brain 🎨  
+| Service | Description |
+|---|---|
+| 🎨 **Creative Production** | Brand identity, UI/UX, photography & videography |
+| 🖥️ **Custom Software** | Web apps, mobile apps, APIs & enterprise systems |
+| ☁️ **SaaS Products** | Cloud platforms, multi-tenant architecture, billing |
+| 🤖 **AI Solutions** | ML models, NLP, computer vision, intelligent automation |
 
----
-
-## 💪🏽 Our Core Vibes
-
-| **Vibe**       | **Wetin e mean**                                      |
-|----------------|-------------------------------------------------------|
-| **Ubuntu**     | We rise by lifting others, share the knowledge, no man left behind. |
-| **Sankofa**    | Roots matter, but we dey push forward with style.     |
-| **Innovation** | Mad solutions, global reach, local spice.             |
-| **Integrity**  | Code clean, culture proud, community solid.           |
 
 ---
 
-## 🚀 Join the CPInc Wave
+## Active Projects
 
-You code? Design? Or just dey love the energy? Chair dey for you.  
-Grab waakye, jollof, plus kelewele, make we build something **legendary**!  
+> Our client and product repositories are private. Public repositories include open-source tools, templates, and starter kits we share with the community.
 
 ---
 
-## 💬 Quick Ghana Flex
+## Work With Us
 
-> *“Small start, big dreams.”*  
-> From Accra streets go global open source — we dey write history, one commit at a time.  
+We take on a select number of new clients each quarter.
 
-🇬🇭 **Built in Ghana, with love, code, plus pure vibes.**
+
