@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: 💬 Team Slack
+    url: https://jumpspaces.slack.com
+    about: For urgent or time-sensitive issues, reach out in Slack first.
+  - name: 📬 General Enquiries
+    url: mailto:hello@jumpspaces.com
+    about: For non-technical questions or client onboarding.
+  - name: 🔒 Security Vulnerability
+    url: mailto:security@jumpspaces.com
+    about: Please report security issues privately — do not open a public issue.

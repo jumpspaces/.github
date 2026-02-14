@@ -1,0 +1,64 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: true
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_ENV: staging
+
+      - name: Run tests
+        run: npm run test
+
+      # ── Replace with your staging deploy command ──
+      - name: Deploy to staging
+        run: echo "Add your staging deploy command here"
+        env:
+          NODE_ENV: staging
+          # VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Comment staging URL on PR
+        uses: actions/github-script@v7
+        if: success()
+        with:
+          script: |
+            const prs = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: `${context.repo.owner}:staging`
+            });
+            if (prs.data.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prs.data[0].number,
+                body: `✅ **Staging deployment complete.**\n🔗 Preview: https://staging.jumpspaces.com`
+              });
+            }

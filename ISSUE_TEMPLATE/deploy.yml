@@ -1,0 +1,64 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Run tests before deploy
+        run: npm run test
+
+      # ── Replace the step below with your actual deploy command ──
+      # Examples:
+      #   Vercel:  npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+      #   AWS:     aws s3 sync ./out s3://${{ secrets.S3_BUCKET }} ...
+      #   Railway: railway up
+      - name: Deploy
+        run: echo "Add your deploy command here"
+        env:
+          # Add your secrets here — store them in GitHub Secrets, never in code
+          # VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          NODE_ENV: production
+
+      - name: Notify on success
+        if: success()
+        run: echo "Deployment to production succeeded."
+        # Optional: Replace with Slack notification
+        # curl -X POST -H 'Content-type: application/json' \
+        #   --data '{"text":"✅ jumpspaces/${{ github.event.repository.name }} deployed to production."}' \
+        #   ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "Deployment to production FAILED."
+        # Optional: Replace with Slack notification

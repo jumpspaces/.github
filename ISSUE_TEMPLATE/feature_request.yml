@@ -1,0 +1,66 @@
+name: ✨ Feature Request
+description: Propose a new feature or improvement
+title: "feat: <short description>"
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement. The more detail you provide, the easier it is for us to evaluate and prioritise.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What is the current frustration or limitation?
+      placeholder: "I'm always frustrated when... / Currently there's no way to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature or change you'd like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other solutions or workarounds have you considered?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High — blocks key workflow
+        - Medium — would significantly improve experience
+        - Low — nice to have
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend / UI
+        - Backend / API
+        - Database
+        - Authentication / Permissions
+        - CI/CD / DevOps
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Mockups, diagrams, references to similar features elsewhere, or any other supporting detail.

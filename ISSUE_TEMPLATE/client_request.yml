@@ -1,0 +1,93 @@
+name: 📋 Client Request
+description: Log a task, change request, or deliverable from a client
+title: "task: <short description>"
+labels: ["client-request", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to track client-requested changes, new deliverables, or feedback items.
+
+  - type: input
+    id: client
+    attributes:
+      label: Client
+      placeholder: "Acme Corp"
+    validations:
+      required: true
+
+  - type: input
+    id: requested-by
+    attributes:
+      label: Requested By
+      placeholder: "Jane Smith (jane@acmecorp.com)"
+    validations:
+      required: true
+
+  - type: input
+    id: date-requested
+    attributes:
+      label: Date Requested
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Request Description
+      description: What is the client asking for? Include original wording if possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this task is done? What does the client need to see/confirm?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request Type
+      options:
+        - New feature / page
+        - Content update
+        - Design change
+        - Bug / defect
+        - Performance improvement
+        - Scope change
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Urgent — blocks client go-live
+        - High — needed this sprint
+        - Medium — needed this month
+        - Low — backlog
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Client Deadline
+      placeholder: "YYYY-MM-DD or 'No hard deadline'"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Internal Notes
+      description: Any internal context the team should know — scope implications, contract notes, technical constraints.
